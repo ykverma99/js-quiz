@@ -49,8 +49,11 @@ main {
   min-height: 2em;
 }
 .start-game {
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
   text-align: center;
+  align-items: center;
 }
 #next {
   background: linear-gradient(45deg, rgb(241, 155, 234), rgb(120, 231, 235));
@@ -61,6 +64,7 @@ main {
   font-weight: 700;
   border-radius: 5px;
   transform: scale(1);
+  text-align: center;
   transition: all 0.4s ease;
   cursor: pointer;
 }
