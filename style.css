@@ -1,46 +1,85 @@
 body {
-    margin: 1rem auto;
-    padding: 3rem;
-    font-family: sans-serif;
-  }
-  header {
-    width: 50%;
-    margin: 1em auto;
-  }
-  main {
-    min-width: 25rem;
-    max-width: 50%;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-  }
-  #statement {
-    border: 1px solid black;
-    border-radius: 0.5rem;
-    box-shadow: 5px 5px 5px gray;
-    padding: 1rem;
-    font-size: x-large;
-    text-align: center;
-    margin: 1rem 0px;
-    min-height: 2em;
-  }
-  #explanation {
-    padding: 1rem;
-    text-align: center;
-  }
-  #options {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  button {
-    padding: 0.5rem;
-    font-size: medium;
-    border-radius: 5px;
-  }
-  .correct {
-    background-color: lightgreen;
-  }
-  .incorrect {
-    background-color: lightpink;
-  }
+  margin: 1rem auto;
+  padding: 3rem;
+  font-family: sans-serif;
+}
+header {
+  width: 50%;
+  margin: 1em auto;
+}
+.question {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.question_no {
+  display: flex;
+  align-items: center;
+}
+.score {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.score > p {
+  margin: 2px 0 0 0;
+  font-weight: 600;
+}
+.right > p {
+  color: rgb(0, 107, 0);
+}
+.wrong > p {
+  color: red;
+}
+main {
+  min-width: 25rem;
+  max-width: 50%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+#statement {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px gray;
+  padding: 1rem;
+  font-size: x-large;
+  text-align: center;
+  margin: 1rem 0px;
+  min-height: 2em;
+}
+.start-game {
+  padding: 1rem;
+  text-align: center;
+}
+#next {
+  background: linear-gradient(45deg, rgb(241, 155, 234), rgb(120, 231, 235));
+  width: 10vw;
+  border: 0;
+  box-shadow: 5px 3px 14px rgba(0, 0, 0, 0.596);
+  font-size: larger;
+  font-weight: 700;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+#next:active {
+  transform: scale(0.89);
+}
+#options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  padding: 0.5rem;
+  font-size: medium;
+  border-radius: 5px;
+}
+.correct {
+  background-color: lightgreen;
+}
+.incorrect {
+  background-color: lightpink;
+}

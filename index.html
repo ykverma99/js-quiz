@@ -9,17 +9,33 @@
     <header>
       <h1>Quiz.js</h1>
       <p>Do you know JS? Find out!</p>
+      <span class="question">
+        <h3>Questions:</h3>
+        <span class="question_no">
+          <p id="total_qus"></p>
+        </span>
+      </span>
+      <span class="right score">
+        <h3>Right:</h3>
+        <p id="right"></p>
+      </span>
+      <span class="wrong score">
+        <h3>left:</h3>
+        <p id="wrong"></p>
+      </span> 
     </header>
 
     <main>
       <div id="statement"></div>
 
       <div id="options">
-        <button name="true" value="true">true</button>
-        <button name="false" value="false">false</button>
+        <button name="true" disabled value="true">true</button>
+        <button name="false" disabled value="false">false</button>
       </div>
 
-      <div id="explanation"></div>
+      <div class="start-game">
+        <button id="next">Start</button>
+      </div>
     </main>
 
     <script src="./index.js"></script>
