@@ -4,8 +4,6 @@ async function fetchData() {
   return data;
 }
 
-// const data = await fetchData()
-// console.log(data)
 let GLOBALDATA;
 let counter = -1;
 
@@ -34,43 +32,15 @@ function startGame(curr, length, statementText) {
     button.classList.remove("incorrect");
   }
   startBtn.textContent = "Next Qus";
-  console.log(wrong, "start");
   //   startBtn.style.display = "none";
   disable(startBtn);
 }
-
-// function isCorrect(guess) {
-//   for (let button of optionBtn) {
-//     button.addEventListener("click", (e) => {
-//       for (let disabledButton of optionBtn) {
-//         disable(disabledButton);
-//       }
-//       console.log(guess.toLowerCase())
-//       console.log(button.value)
-
-//       if (e.target.value === guess.toLowerCase()) {
-//         // right = right + 1
-//         console.log("inside",guess.toLowerCase())
-//         console.log("inside",button.value)
-//         button.classList.add("correct");
-//       } else {
-//         // wrong = wrong + 1
-//         console.log("outside",guess.toLowerCase())
-//         console.log("outside",button.value)
-//         button.classList.add("incorrect");
-//       }
-//     //   startBtn.style.display = "flex";
-//     enable(startBtn)
-//     });
-//   }
-// }
 
 startBtn.addEventListener("click", fetchDataAndUpdate);
 
 async function fetchDataAndUpdate() {
   counter++;
   let bool = true
-  console.log(wrong, "Fetch");
   try {
     const newData = await fetchData();
     GLOBALDATA = newData[counter];
@@ -93,7 +63,6 @@ async function fetchDataAndUpdate() {
                 wrong++;
                 bool = false
             }
-          console.log(wrong, "count");
           button.classList.add("incorrect");
         }
         //   startBtn.style.display = "flex";
